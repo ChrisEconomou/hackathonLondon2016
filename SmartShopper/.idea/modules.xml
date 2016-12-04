@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/libs/RecorderLevelView/RecorderLevelView.iml" filepath="$PROJECT_DIR$/libs/RecorderLevelView/RecorderLevelView.iml" />
       <module fileurl="file://$PROJECT_DIR$/SmartShopper.iml" filepath="$PROJECT_DIR$/SmartShopper.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libs/libs.iml" filepath="$PROJECT_DIR$/libs/libs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libs/speechutils-master/speechutils-master.iml" filepath="$PROJECT_DIR$/libs/speechutils-master/speechutils-master.iml" />
     </modules>
   </component>
 </project>
