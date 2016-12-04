@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="smartshopper.hackathon.london.smartshopper.MainActivity">
+    tools:context="hackathon.london.smartshopper.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_height="wrap_content"
@@ -21,8 +21,14 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <include layout="@layout/content_main"/>
+    </FrameLayout>
 
-    <include layout="@layout/content_main"/>
+
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

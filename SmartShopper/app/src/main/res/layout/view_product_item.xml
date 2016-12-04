@@ -1,0 +1,6 @@
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/products_image"
+    android:layout_width="wrap_content"
+    android:layout_margin="@dimen/default_margin_xxsmall"
+    android:layout_height="@dimen/product_image_height"
+    android:orientation="vertical"/>

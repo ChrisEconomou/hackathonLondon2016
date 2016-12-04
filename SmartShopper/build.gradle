@@ -6,7 +6,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.2'
-
+        classpath 'me.tatarka:gradle-retrolambda:3.2.3'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -20,4 +20,24 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext{
+
+    supportLibraryVersion = '24.0.0'
+    frescoVersion = '0.11.0'
+    playServicesVersion = '9.0.2'
+    retrofitVersion = '2.1.0'
+    powerMockVersion = '1.6.5'
+    leakCanaryVersion = '1.4-beta2'
+    robolectricVersion = '3.0'
+    okHTTPVersion = '3.4.1'
+    espressoVersion = '2.2.2'
+    instaBugVersion = '2.4.0'
+    adobeVersion = '4.11.0'
+    facebookVersion = '4.13.1'
+    okioVersion = '1.9.0'
+    mockitoVersion = '1.10.19'
+    junitVersion = '4.12'
+    newRelicVersion = '5.8.4'
 }

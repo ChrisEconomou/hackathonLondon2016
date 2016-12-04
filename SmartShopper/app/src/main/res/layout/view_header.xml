@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/products_image"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/default_margin_medium">
+
+    <com.chriseconomou.depop.view.RoundedImageView
+        android:layout_alignParentTop="true"
+        android:id="@+id/header_image_profile"
+        android:layout_width="@dimen/header_image_width"
+        android:layout_height="@dimen/header_image_height"
+        android:src="@drawable/logo"
+        android:layout_marginRight="@dimen/default_margin_medium" />
+
+    <TextView
+        android:text="Aksahay Dashrath"
+        style="@style/TextStyleLarge.Black"
+        android:layout_toRightOf="@+id/header_image_profile"
+        android:id="@+id/header_text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="27"
+        android:layout_marginTop="@dimen/default_margin_small"
+        style="@style/TextStyleLarge.Black"
+        android:layout_alignLeft="@+id/header_text_name"
+        android:layout_below="@+id/header_text_name"
+        android:id="@+id/header_text_following_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginRight="@dimen/default_margin_medium"
+        android:text="@string/following"
+        android:layout_marginTop="@dimen/default_margin_xsmall"
+        style="@style/TextStyleSmall"
+        android:layout_alignLeft="@+id/header_text_following_value"
+        android:layout_below="@+id/header_text_following_value"
+        android:id="@+id/header_text_following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="27"
+        style="@style/TextStyleLarge.Black"
+        android:layout_toRightOf="@+id/header_text_following"
+        android:layout_alignTop="@+id/header_text_following_value"
+        android:layout_below="@+id/header_text_name"
+        android:id="@+id/header_text_followers_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="@string/followers"
+        style="@style/TextStyleSmall"
+        android:layout_alignTop="@+id/header_text_following"
+        android:layout_alignLeft="@+id/header_text_followers_value"
+        android:layout_below="@+id/header_text_followers_value"
+        android:id="@+id/header_text_followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="@dimen/default_margin_medium"
+        android:text="2 reviews"
+        android:layout_alignLeft="@+id/header_text_following_value"
+        android:layout_below="@+id/header_text_followers"
+        android:id="@+id/header_text_reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="@dimen/default_margin_large"
+        android:text="bio"
+        android:layout_alignLeft="@+id/header_image_profile"
+        android:layout_below="@+id/header_image_profile"
+        android:id="@+id/header_text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="http://ww.goggle.com"
+        android:layout_alignLeft="@+id/header_image_profile"
+        android:layout_below="@+id/header_text_description"
+        android:id="@+id/header_text_url"
+        android:layout_width="wrap_content"
+        android:autoLink="web"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

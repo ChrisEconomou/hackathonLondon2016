@@ -1,11 +1,23 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'me.tatarka.retrolambda'
 android {
+    buildscript {
+        repositories {
+            jcenter()
+        }
+
+    }
+
+    allprojects {
+        repositories {
+            jcenter()
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "smartshopper.hackathon.london.smartshopper"
-        minSdkVersion 15
+        applicationId "hackathon.london.smartshopper"
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -17,14 +29,58 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.fasterxml.jackson.core:jackson-core:2.7.3'
+        resolutionStrategy.force 'com.android.support:support-annotations:23.4.0'
+        // Forcing the latest version of OkHttp, as the 2.5.0 has problems with URL parsing.
+        // On our side this was causing ANDROID-1152 (more details in JIRA)
+        resolutionStrategy.force 'com.squareup.okhttp:okhttp:2.7.0'
+
+    }
 }
 
 dependencies {
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
+
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'com.android.support:design:25.0.1'
     testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton:butterknife:8.1.0'
+    compile 'com.willblaschko.android.alexa:AlexaAndroid:2.3.2'
+
+
+    //retrofit
+    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+
+    compile "com.squareup.retrofit2:adapter-rxjava:$rootProject.ext.retrofitVersion"
+
+    // Oto
+    compile 'com.squareup:otto:1.3.8'
+
+    // RX
+    compile 'io.reactivex:rxjava:1.2.1'
+    compile 'io.reactivex:rxandroid:1.2.1'
+
+    //okhttp
+    compile "com.squareup.okhttp3:okhttp-urlconnection:$rootProject.ext.okHTTPVersion"
+    compile "com.squareup.okio:okio:$rootProject.ext.okioVersion"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+    compile("com.squareup.retrofit2:converter-simplexml:$rootProject.ext.retrofitVersion") {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+    compile("com.pubnub:pubnub:4.2.0")
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.jakewharton:butterknife:6.0.0'
+
+
+
 }
